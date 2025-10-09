@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontaktoni Me Ne</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 0;
+    }
+    
+    /* NAVBAR */
+    nav {
+      background-color: #1a1a1a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      
+    }
+    nav a{
+        text-decoration: none;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .nav-links a:hover {
+      color: #4CAF50;
+    }
+
+
+    .contact-container {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      max-width: 500px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+    }
+
+    .contact-info p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    .label {
+      font-weight: bold;
+    }
+     @media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }}
+  .menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* --- MOBILE STYLES --- */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .nav-links a {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    color: white;
+    border-bottom: 1px solid #333;
+  }
+
+  .nav-links a:hover {
+    background-color: #333;
+    color: #4CAF50;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+.location-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin: 40px auto;
+  max-width: 1300px;
+}
+
+.contact-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 450px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.map-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+  </style>
+</head>
+<body>
+   <!-- NAVBAR -->
+  <nav>
+  <a href="index.html" class="logo">SharriTech</a>
+
+  
+  <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
+
+  <!-- Nav links -->
+  <div class="nav-links" id="navLinks">
+    <a href="TV.html">TV</a>
+    <a href="Frigorifer.html">Frigorifer</a>
+    <a href="frizat.html">Friz</a>
+    <a href="lavatriqe.html">Lavatriçe</a>
+    <a href="enelarese.html">Enëlarëse</a>
+    <a href="Shporetelektrik.html">Shporet elektrik</a>
+    <a href="thithese.html">Thithëse elektrike</a>
+    <a href="mikroval.html">Mikrovalë</a>
+    <a href="bojler.html">Bojler</a>
+    <a href="klima.html">Klima</a>
+    
+  </div>
+</nav>
+
+  <!-- LOKACIONI I PARË -->
+<div class="location-wrapper">
+  <div class="contact-container">
+    <h2>Na Kontakto</h2>
+    <div class="contact-info">
+      <p><span class="label">Emri:</span>SharriCenter</p>
+      <p><span class="label">Email:</span>Sharri@gmail.com</p>
+      <p><span class="label">Numri i telefonit:</span> +383 45-000-000</p>
+      <p><span class="label">Adresa:</span>Rruga: Mentor Morina, Komoran</p>
+      <p><span class="label">Orari i punës:</span> E Hënë - E Diel, 06:00 - 23:00</p>
+    </div>
+  </div>
+
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5349.564438646844!2d20.90230819828067!3d42.57631776702404!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135371174eebd74d%3A0xcff0b108a7a9050a!2sSHARRI%20QT%20SHPK!5e0!3m2!1sen!2sus!4v1759854631926!5m2!1sen!2sus" 
+      allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</div>
+
+<!-- LOKACIONI I DYTË -->
+<div class="location-wrapper">
+  <div class="contact-container">
+    <h2>Na Kontakto</h2>
+    <div class="contact-info">
+      <p><span class="label">Emri:</span>SharriCenter2</p>
+      <p><span class="label">Email:</span>Sharri@gmail.com</p>
+      <p><span class="label">Numri i telefonit:</span> +383 45-000-000</p>
+      <p><span class="label">Adresa:</span>Magjistralja Pejë-Prishtinë, Llapushnik</p>
+      <p><span class="label">Orari i punës:</span> E Hënë - E Diel, 06:00 - 23:00</p>
+    </div>
+  </div>
+
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8269.98370059056!2d20.881363123072305!3d42.57538534329059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13537184e6be8fb3%3A0x8fc2a7e6c8cfc6fe!2sSharri%20Center%202!5e0!3m2!1sen!2s!4v1759705778020!5m2!1sen!2s"
+      allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</div>
+
+  <script>
+  function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    const menuToggle = document.getElementById("menuToggle");
+
+    navLinks.classList.toggle("show");
+
+    // Toggle icon
+    menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
+  }
+</script>
+</body>
+</html>

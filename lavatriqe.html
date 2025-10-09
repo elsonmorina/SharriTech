@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SharriTech</title>
+    <style>
+        body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    /* NAVBAR */
+    nav {
+      background-color: #1a1a1a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      
+    }
+    nav a{
+        text-decoration: none;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .nav-links a:hover {
+      color: #4CAF50;
+    }
+     .products {
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .products a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .products h2 {
+      margin-bottom: 40px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+    }
+
+    .product {
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .product h3 {
+      margin: 10px 0;
+      font-size: 1.1rem;
+    }
+
+    .product p {
+      color: #4CAF50;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .hero {
+    padding: 60px 15px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero a {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .products {
+    padding: 40px 20px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr; /* one product per row */
+  }
+
+  .product img {
+    height: auto;
+  }
+}
+/* Hamburger icon */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* --- MOBILE STYLES --- */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .nav-links a {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    color: white;
+    border-bottom: 1px solid #333;
+  }
+
+  .nav-links a:hover {
+    background-color: #333;
+    color: #4CAF50;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+.nav-links .active{
+    color: #4CAF50;
+}
+del{
+  color: red;
+}
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+  <nav>
+  <a href="index.html" class="logo">SharriTech</a>
+
+  
+  <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
+
+  <!-- Nav links -->
+  <div class="nav-links" id="navLinks">
+    <a href="TV.html">TV</a>
+    <a href="Frigorifer.html">Frigorifer</a>
+    <a href="frizat.html">Friz</a>
+    <a href="lavatriqe.html">Lavatriçe</a>
+    <a href="enelarese.html">Enëlarëse</a>
+    <a href="Shporetelektrik.html">Shporet elektrik</a>
+    <a href="thithese.html">Thithëse elektrike</a>
+    <a href="mikroval.html">Mikrovalë</a>
+    <a href="bojler.html">Bojler</a>
+    <a href="klima.html">Klima</a>
+    
+  </div>
+</nav>
+
+<section class="products">
+    <div class="product-grid">
+    <a href="lavatriqe1.html">
+      <div class="product">
+        <img src="images/lavatriqe1.png" alt="lavatriqe">
+        <h3>RROBATHARËSE CDR-0812A 8KG</h3>
+        <p>€280.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe2.html">
+      <div class="product">
+        <img src="images/lavatriqe2.png" alt="lavatriqe">
+        <h3>RROBALARËSE VIVAX WFL-120615B 6KG</h3>
+       <p>€259.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe3.html">
+      <div class="product">
+        <img src="images/lavatriqe3.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE SAMSUNG WW904040CE1 9KG</h3>
+        <p>€470.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe4.html">
+      <div class="product">
+        <img src="images/lavatriqe4.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE SAMSUNG WW90T4040CE1 9KG</h3>
+        <p>€499.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe5.html">
+      <div class="product">
+        <img src="images/lavatriqe5.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE SAMSUNG WW90T4020EE1 9KG</h3>
+        <p>€420.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe6.html">
+      <div class="product">
+        <img src="images/lavatriqe6.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE SAMSUNG WW80T4020EEL1 8KG</h3>
+        <p>€359.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe7.html">
+      <div class="product">
+        <img src="images/lavatriqe7.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE MIDEA MF110W70/W-HR 7KG</h3>
+        <p>€269.99</p>
+      </div>
+    </a>
+    <a href="lavatriqe8.html">
+      <div class="product">
+        <img src="images/lavatriqe8.png" alt="lavatriqe">
+        <h3>RROBALARËSE MIDEA MF100W80B/W 8KG</h3>
+        <p>€345.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe9.html">
+      <div class="product">
+        <img src="images/lavatriqe9.png" alt="lavatriqe">
+        <h3>RROBALARËSE MIDEA MF200W120WB/W-HR 12KG</h3>
+        <p>€479.99</p>
+      </div>
+    </a>
+    <a href="lavatriqe10.html">
+      <div class="product">
+        <img src="images/lavatriqe10.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE MIDEA MF110W90BA10/W-HR 9KG</h3>
+        <p>€349.99</p>
+      </div>
+    </a>
+    <a href="lavatriqe11.html">
+      <div class="product">
+        <img src="images/lavatriqe11.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE MIDEA MF110W80BA10/W-HR 8KG</h3>
+        <p>€319.99</p>
+      </div>
+    </a>
+    <a href="lavatriqe12.html">
+      <div class="product">
+        <img src="images/lavatriqe12.png" alt="lavatriqe">
+        <h3>RROBALARËSE MIDEA MF100W60/W 6KG</h3>
+        <p>€279.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe13.html">
+      <div class="product">
+        <img src="images/lavatriqe13.png" alt="lavatriqe">
+        <h3>RROBALARËSE VIVAX WFL-100615BS 6KG</h3>
+        <p>€235.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe14.html">
+      <div class="product">
+        <img src="images/lavatriqe14.png" alt="lavatriqe">
+        <h3>RROBALARËSE INDESIT BWE 91496X WSV EE 9KG</h3>
+        <p>€400.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe15.html">
+      <div class="product">
+        <img src="images/lavatriqe15.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE HOTPOINT/ARISTON NLCD 946 BS A EU N 9KG</h3>
+        <p>€560.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe16.html">
+      <div class="product">
+        <img src="images/lavatriqe16.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE INDESIT EWC 81483 W EU N 8KG</h3>
+        <p>€365.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe17.html">
+      <div class="product">
+        <img src="images/lavatriqe17.jpg" alt="lavatriqe">
+        <h3>RROBATHARËSE VOX TDM-710T 7KG</h3>
+        <p>€349.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe18.html">
+      <div class="product">
+        <img src="images/lavatriqe18.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE HOTPOINT/ARISTON NS702U W E EU 7KG</h3>
+        <p>€379.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe19.html">
+      <div class="product">
+        <img src="images/lavatriqe19.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE HOTPOINT/ARISTON AQD972F 697 EU N 9KG</h3>
+        <p>€590.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe20.html">
+      <div class="product">
+        <img src="images/lavatriqe20.png" alt="lavatriqe">
+        <h3>RROBALARËSE HOTPOINT/ARISTON NM11 945 WS A EU N 9KG</h3>
+        <p>€480.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe21.html">
+      <div class="product">
+        <img src="images/lavatriqe21.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE VIVAX WFL-140812CI 8KG</h3>
+        <p>€299.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe22.html">
+      <div class="product">
+        <img src="images/lavatriqe22.png" alt="lavatriqe">
+        <h3>RROBALARËSE VIVAX WFL-140712CI 7KG</h3>
+        <p>€285.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe23.html">
+      <div class="product">
+        <img src="images/lavatriqe23.jpg" alt="lavatriqe">
+        <h3>RROBATHARËSE SAMSUNG DV80T5220AV 8KG</h3>
+        <p>€649.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe24.html">
+      <div class="product">
+        <img src="images/lavatriqe24.png" alt="lavatriqe">
+        <h3>RROBALARËSE INDESIT EWSC 61251 W EU N 6KG</h3>
+        <p>€299.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe25.html">
+      <div class="product">
+        <img src="images/lavatriqe25.png" alt="lavatriqe">
+        <h3>RROBALARËSE INDESIT BTW B7220P EU N 7KG</h3>
+        <p>€429.99</p>
+      </div>
+    </a>
+    <a href="lavatriqe26.html">
+      <div class="product">
+        <img src="images/lavatriqe26.jpg" alt="lavatriqe">
+        <h3>RROBATHARËSE SAMSUNG DV80TA020DE 8KG</h3>
+        <p>€565.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe27.html">
+      <div class="product">
+        <img src="images/lavatriqe27.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE SAMSUNG WW90T4020EE1 9KG</h3>
+        <p>€420.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe28.html">
+      <div class="product">
+        <img src="images/lavatriqe28.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE SAMSUNG WW70TA026AE1 7KG</h3>
+        <p>€420.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe29.html">
+      <div class="product">
+        <img src="images/lavatriqe29.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE SAMSUNG WW71T301MWW 7KG</h3>
+        <p>€320.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe30.html">
+      <div class="product">
+        <img src="images/lavatriqe30.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE INDESIT EWC 71252 W EE N 7KG</h3>
+        <p>€289.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe31.html">
+      <div class="product">
+        <img src="images/lavatriqe31.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE INDESIT IM 762 MY TIME EE 7KG</h3>
+        <p>€310.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe32.html">
+      <div class="product">
+        <img src="images/lavatriqe32.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE SAMSUNG WW70T304MBW 7KG</h3>
+        <p>€299.99</p>
+      </div>
+    </a>
+    <a href="lavatriqe33.html">
+      <div class="product">
+        <img src="images/lavatriqe33.jpeg" alt="lavatriqe">
+        <h3>RROBALARËSE INDESIT IM 642 MY TIME EE 6KG</h3>
+        <p>€285.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe34.html">
+      <div class="product">
+        <img src="images/lavatriqe34.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE INDESIT IM 862 MY TIME EE 8KG</h3>
+        <p>€340.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe35.html">
+      <div class="product">
+        <img src="images/lavatriqe35.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE SAMSUNG WW70T4040EE1 7KG</h3>
+        <p>€339.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe36.html">
+      <div class="product">
+        <img src="images/lavatriqe36.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE SAMSUNG WW80T4540AE1LE 8KG</h3>
+        <p>€479.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe37.html">
+      <div class="product">
+        <img src="images/lavatriqe37.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE INDESIT LAVAT IWDE 7105B EU 7KG</h3>
+        <p>€425.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe38.html">
+      <div class="product">
+        <img src="images/lavatriqe38.png" alt="lavatriqe">
+        <h3>RROBALARËSE HUGO H-6100 6KG</h3>
+        <p>€345.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe39.html">
+      <div class="product">
+        <img src="images/lavatriqe39.jpg" alt="lavatriqe">
+        <h3>RROBALARËSE DELON DL6100 A</h3>
+        <p>€245.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe40.html">
+      <div class="product">
+        <img src="images/lavatriqe40.png" alt="lavatriqe">
+        <h3>RROBALARËSE SAMSUNG WW90T4040CE1</h3>
+        <p>€470.00</p>
+      </div>
+    </a>
+    <a href="lavatriqe41.html">
+      <div class="product">
+        <img src="images/lavatriqe41.png" alt="lavatriqe">
+        <h3>RROBALARËSE MIDEA MF100T60B/W-HR</h3>
+        <p>€299.00</p>
+      </div>
+    </a>
+    </div>
+  </section>
+
+
+
+
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    const menuToggle = document.getElementById("menuToggle");
+
+    navLinks.classList.toggle("show");
+
+    // Toggle icon
+    menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SharriTech</title>
+    <style>
+        body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    /* NAVBAR */
+    nav {
+      background-color: #1a1a1a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      
+    }
+    nav a{
+        text-decoration: none;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .nav-links a:hover {
+      color: #4CAF50;
+    }
+     .products {
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .products a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .products h2 {
+      margin-bottom: 40px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+    }
+
+    .product {
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .product h3 {
+      margin: 10px 0;
+      font-size: 1.1rem;
+    }
+
+    .product p {
+      color: #4CAF50;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .hero {
+    padding: 60px 15px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero a {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .products {
+    padding: 40px 20px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr; /* one product per row */
+  }
+
+  .product img {
+    height: auto;
+  }
+}
+/* Hamburger icon */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* --- MOBILE STYLES --- */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .nav-links a {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    color: white;
+    border-bottom: 1px solid #333;
+  }
+
+  .nav-links a:hover {
+    background-color: #333;
+    color: #4CAF50;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+.nav-links .active{
+  color: #4CAF50;
+}
+del{
+  color: red;
+}
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+  <nav>
+  <a href="index.html" class="logo">SharriTech</a>
+
+  
+  <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
+
+  <!-- Nav links -->
+  <div class="nav-links" id="navLinks">
+    <a href="TV.html">TV</a>
+    <a href="Frigorifer.html">Frigorifer</a>
+    <a href="frizat.html">Friz</a>
+    <a href="lavatriqe.html">Lavatriçe</a>
+    <a href="enelarese.html">Enëlarëse</a>
+    <a href="Shporetelektrik.html">Shporet elektrik</a>
+    <a href="thithese.html">Thithëse elektrike</a>
+    <a href="mikroval.html">Mikrovalë</a>
+    <a href="bojler.html">Bojler</a>
+    <a href="klima.html">Klima</a>
+    
+  </div>
+</nav>
+
+<section class="products">
+    <div class="product-grid">
+    <a href="tv1.html">
+    
+      <div class="product">
+        <img src="images/ledtv1.jpg" alt="TV">
+        <h3>TELEVIZOR SAMSUNG UE65AU7022K|65"LED 4K</h3>
+        <p>€699.00</p>
+      </div>
+    </a>
+    <a href="tv2.html">
+      <div class="product">
+        <img src="images/philipstv2.png" alt="TV">
+        <h3>TELEVIZOR PHILIPS LED 50PUS8009/12</h3>
+        <p>€439.99</p>
+      </div>
+      </a>
+      <a href="tv3.html">
+      <div class="product">
+        <img src="images/lgudhtv3.jpg" alt="TV">
+        <h3>TELEVIZOR LG UHD 43NANO753QC</h3>
+        <p>€435.99</p>
+      </div>
+      </a>
+      <a href="tv4.html">
+      <div class="product">
+        <img src="images/lgudhtv4.jpg" alt="TV">
+        <h3>TELEVIZOR LG UHD 60UQB1003LB</h3>
+        <p>€710.00</p>
+      </div>
+      </a>
+      <a href="tv5.html">
+      <div class="product">
+        <img src="images/tv5.jpg" alt="TV">
+        <h3>TELEVIZOR SAMSUNG LED TV50TU7022KXXH</h3>
+        <p>€429.00</p>
+      </div>
+      </a>
+      <a href="tv6.html">
+      <div class="product">
+        <img src="images/tv6.jpg" alt="TV">
+        <h3>TELEVIZOR VOX LED 43ADW-D1B</h3>
+        <del>€399.00</del><p>€365.00</p>
+      </div>
+      </a>
+      <a href="tv7.html">
+      <div class="product">
+        <img src="images/tv7.jpg" alt="TV">
+        <h3>TELEVIZOR SAMSUNG QE50Q60AAU</h3>
+        <p>€530.00</p>
+      </div>
+      </a>
+      <a href="tv8.html">
+      <div class="product">
+        <img src="images/tv8.jpg" alt="TV">
+        <h3>TELEVZIOR SAMSUNG UE50AU7172DU</h3>
+        <p>€500.00</p>
+      </div>
+      </a>
+      <a href="tv9.html">
+      <div class="product">
+        <img src="images/tv9.jpg" alt="TV">
+        <h3>TELEVIZOR SAMSUNG UE50TU7022K</h3>
+        <p>€429.00</p>
+      </div>
+      </a>
+      <a href="tv10.html">
+      <div class="product">
+        <img src="images/tv10.jpg" alt="TV">
+        <h3>TELEVIZOR PHILIPS 50PUS7805/12</h3>
+        <p>€399.00</p>
+      </div>
+      </a>
+      <a href="tv11.html">
+      <div class="product">
+        <img src="images/tv11.jpg" alt="TV">
+        <h3>TELEVIZOR PHILIPS 55PUS7609/12</h3>
+        <p>€427.00</p>
+      </div>
+      </a>
+      <a href="tv12.html">
+      <div class="product">
+        <img src="images/tv12.jpg" alt="TV">
+        <h3>TELEVIZOR LG 55UT80003LA</h3>
+        <p>€445.00</p>
+      </div>
+      </a>
+      <a href="tv13.html">
+      <div class="product">
+        <img src="images/tv13.jpg" alt="TV">
+        <h3>TELEVIZOR PHILIPS 65PUS7000/12</h3>
+        <p>€569.99</p>
+      </div>
+      </a>
+      <a href="tv14.html">
+      <div class="product">
+        <img src="images/tv14.jpg" alt="TV">
+        <h3>TELEVIZOR VIVAX 55Q10C</h3>
+        <p>€510.00</p>
+      </div>
+      </a>
+      <a href="tv15.html">
+      <div class="product">
+        <img src="images/tv15.jpg" alt="TV">
+        <h3>TELEVIZOR SAMSUNG UE55AU8072U</h3>
+        <p>€569.00</p>
+      </div>
+      </a>
+      <a href="tv16.html">
+      <div class="product">
+        <img src="images/tv16.jpg" alt="TV">
+        <h3>TELEVIZOR VIVAX TV-50UHD123T2S2SM</h3>
+        <p>€430.00</p>
+      </div>
+      </a>
+      <a href="tv17.html">
+      <div class="product">
+        <img src="images/tv14.jpg" alt="TV">
+        <h3>TELEVIZOR VIVAX 50Q10C</h3>
+        <p>€455.00</p>
+      </div>
+      </a>
+      <a href="tv18.html">
+      <div class="product">
+        <img src="images/tv18.jpg" alt="TV">
+        <h3>TELEVIZOR SASMUNG UE55BU8072U</h3>
+        <p>€699.00</p>
+      </div>
+      </a>
+      <a href="tv19.html">
+      <div class="product">
+        <img src="images/tv19.png" alt="TV">
+        <h3>TELEVIZOR VIVAX TV49UHDS61T2S2SM</h3>
+        <p>€370.00</p>
+      </div>
+      </a>
+      <a href="tv20.html">
+      <div class="product">
+        <img src="images/tv20.jpg" alt="TV">
+        <h3>TELEVIZOR PHILIPS 65PUS7409/12</h3>
+        <p>€570.00</p>
+      </div>
+      </a>
+      <a href="tv21.html">
+      <div class="product">
+        <img src="images/tv21.jpg" alt="TV">
+        <h3>TELEVIZOR SAMSUNG LED TV-UE55CU7172U</h3>
+        <p>€580.00</p>
+      </div>
+      </a>
+      <a href="tv22.html">
+      <div class="product">
+        <img src="images/tv22.jpg" alt="TV">
+        <h3>TELEVIZOR SAMSUNG UE55AU7172U</h3>
+        <p>€559.00</p>
+      </div>
+      </a>
+      <a href="tv23.html">
+      <div class="product">
+        <img src="images/tv23.jpg" alt="TV">
+        <h3>TELEVIZOR LG 50UP75003LF</h3>
+        <p>€450.00</p>
+      </div>
+      </a>
+      <a href="tv24.html">
+      <div class="product">
+        <img src="images/tv24.png" alt="TV">
+        <h3>TELEVIZOR PHILIPS 65PUS609/12</h3>
+        <p>€585.00</p>
+      </div>
+      </a>
+      <a href="tv25.html">
+      <div class="product">
+        <img src="images/tv25.jpg" alt="TV">
+        <h3>TELEVIZOR LG 50UR78003LK</h3>
+        <p>€510.00</p>
+      </div>
+      </a>
+      <a href="tv26.html">
+      <div class="product">
+        <img src="images/tv26.jpg" alt="TV">
+        <h3>TELEVIZOR PHILIPS 55PUS7000/12</h3>
+        <p>€429.99</p>
+      </div>
+      </a>
+      <a href="tv27.html">
+      <div class="product">
+        <img src="images/tv27.png" alt="TV">
+        <h3>TELEVIZOR LG 55UT73003LA</h3>
+        <p>€445.00</p>
+      </div>
+      </a>
+      <a href="tv28.html">
+      <div class="product">
+        <img src="images/tv28.png" alt="TV">
+        <h3>TELEVIZOR PHILIPS 75PUS7000/12</h3>
+        <p>€799.00</p>
+      </div>
+      </a>
+      <a href="tv30.html">
+      <div class="product">
+        <img src="images/tv30.jpg" alt="TV">
+        <h3>TELEVIZOR LG 55NANO81T3A</h3>
+        <p>€565.00</p>
+      </div>
+      </a>
+      <a href="tv31.html">
+      <div class="product">
+        <img src="images/tv31.jpg" alt="TV">
+        <h3>TELEVIZOR SASMUNG UE75CU7102K</h3>
+        <p>€1100.00</p>
+      </div>
+      </a>
+      <a href="tv32.html">
+      <div class="product">
+        <img src="images/tv32.png" alt="TV">
+        <h3>TELEVIZOR VIVAX 32LE20K</h3>
+        <p>€145.00</p>
+      </div>
+      </a>
+      <a href="tv33.html">
+      <div class="product">
+        <img src="images/tv33.jpg" alt="TV">
+        <h3>TELEVIZOR SASMUNG UE43TU7092U</h3>
+        <p>€389.00</p>
+      </div>
+      </a>
+      <a href="tv34.html">
+      <div class="product">
+        <img src="images/tv34.png" alt="TV">
+        <h3>TELEVIZOR VIVAX TV-55UHD123T2S2SM</h3>
+        <p>€490.00</p>
+      </div>
+      </a>
+      <a href="tv35.html">
+      <div class="product">
+        <img src="images/tv35.jpg" alt="TV">
+        <h3>TELEVIZOR SASMUNG UE50AU9072U</h3>
+        <p>€610.00</p>
+      </div>
+      </a>
+      <a href="tv36.html">
+      <div class="product">
+        <img src="images/tv36.jpg" alt="TV">
+        <h3>TELEVIZOR SASMUNG QE65Q60AAU</h3>
+        <p>€1150.00</p>
+      </div>
+      </a>
+      
+    </div>
+  </section>
+
+
+
+
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    const menuToggle = document.getElementById("menuToggle");
+
+    navLinks.classList.toggle("show");
+
+    // Toggle icon
+    menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
+  }
+</script>
+</body>
+</html>

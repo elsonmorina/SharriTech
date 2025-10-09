@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SharriTech</title>
+    <style>
+        body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    /* NAVBAR */
+    nav {
+      background-color: #1a1a1a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      
+    }
+    nav a{
+        text-decoration: none;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .nav-links a:hover {
+      color: #4CAF50;
+    }
+     .products {
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .products a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .products h2 {
+      margin-bottom: 40px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+    }
+
+    .product {
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .product h3 {
+      margin: 10px 0;
+      font-size: 1.1rem;
+    }
+
+    .product p {
+      color: #4CAF50;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .hero {
+    padding: 60px 15px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero a {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .products {
+    padding: 40px 20px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr; /* one product per row */
+  }
+
+  .product img {
+    height: auto;
+  }
+}
+/* Hamburger icon */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* --- MOBILE STYLES --- */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .nav-links a {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    color: white;
+    border-bottom: 1px solid #333;
+  }
+
+  .nav-links a:hover {
+    background-color: #333;
+    color: #4CAF50;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+.nav-links .active{
+    color: #4CAF50;
+}
+del{
+  color: red;
+}
+    </style>
+</head>
+<body>
+   <!-- NAVBAR -->
+  <nav>
+  <a href="index.html" class="logo">SharriTech</a>
+
+  
+  <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
+
+  <!-- Nav links -->
+  <div class="nav-links" id="navLinks">
+    <a href="TV.html">TV</a>
+    <a href="Frigorifer.html">Frigorifer</a>
+    <a href="frizat.html">Friz</a>
+    <a href="lavatriqe.html">Lavatriçe</a>
+    <a href="enelarese.html">Enëlarëse</a>
+    <a href="Shporetelektrik.html">Shporet elektrik</a>
+    <a href="thithese.html">Thithëse elektrike</a>
+    <a href="mikroval.html">Mikrovalë</a>
+    <a href="bojler.html">Bojler</a>
+    <a href="klima.html">Klima</a>
+    
+  </div>
+</nav>
+
+<section class="products">
+    <div class="product-grid">
+    <a href="frizi1.html">
+      <div class="product">
+        <img src="images/frizi1.png" alt="lavatriqe">
+        <h3>FRIZ VIVAX CFR143</h3>
+        <p>€195.00</p>
+      </div>
+    </a>
+    <a href="frizi2.html">
+      <div class="product">
+        <img src="images/frizi2.png" alt="lavatriqe">
+        <h3>FRIZ VIVAX CFR-293</h3>
+        <p>€270.00</p>
+      </div>
+    </a>
+    <a href="frizi3.html">
+      <div class="product">
+        <img src="images/frizi3.png" alt="lavatriqe">
+        <h3>FRIZ VIVAX CFR-250</h3>
+        <p>€259.99</p>
+      </div>
+    </a>
+    <a href="frizi4.html">
+      <div class="product">
+        <img src="images/frizi4.jpg" alt="lavatriqe">
+        <h3>FRIZ WHIRPOOL WH1410</h3>
+        <p>€285.00</p>
+      </div>
+    </a>
+    <a href="frizi5.html">
+      <div class="product">
+        <img src="images/frizi5.jpg" alt="lavatriqe">
+        <h3>FRIZ WHIRPOOL WH2010</h3>
+        <p>€357.00</p>
+      </div>
+    </a>
+    <a href="frizi6.html">
+      <div class="product">
+        <img src="images/frizi6.png" alt="lavatriqe">
+        <h3>FRIZ WHIRPOOL WHE3183.1</h3>
+        <p>€410.00</p>
+      </div>
+    </a>
+    <a href="frizi7.html">
+      <div class="product">
+        <img src="images/frizi7.png" alt="lavatriqe">
+        <h3>FRIZ WHIRPOOL WH2010 </h3>
+        <p>€357.00</p>
+      </div>
+    </a>
+    <a href="frizi8.html">
+      <div class="product">
+        <img src="images/frizi8.png" alt="lavatriqe">
+        <h3>FRIZ WHIRLPOOL WHE3933.1 390L</h3>
+        <p>€495.00</p>
+      </div>
+    </a>
+    <a href="frizi9.html">
+      <div class="product">
+        <img src="images/frizi9.png" alt="lavatriqe">
+        <h3>FRIZ VOX BE1-300RL</h3>
+        <del>€399.00</del><p>€350.00</p>
+      </div>
+    </a>
+    <a href="frizi10.html">
+      <div class="product">
+        <img src="images/frizi10.webp" alt="lavatriqe">
+        <h3>FRIZ VOX BE1-400HL</h3>
+        <p>€399.99</p>
+      </div>
+    </a>
+    <a href="frizi11.html">
+      <div class="product">
+        <img src="images/frizi11.png" alt="lavatriqe">
+        <h3>FRIZ VOX BE1-300RL</h3>
+        <p>€345.00</p>
+      </div>
+    </a>
+    <a href="frizi12.html">
+      <div class="product">
+        <img src="images/frizi12.jpg" alt="lavatriqe">
+        <h3>FRIZ MIDEA MDRC280FEE01</h3>
+        <p>€215.00</p>
+      </div>
+    </a>
+    <a href="frizi13.html">
+      <div class="product">
+        <img src="images/frizi13.webp" alt="lavatriqe">
+        <h3>FRIZ MIDEA-MDRC564FZF01 418L</h3>
+        <p>€435.00</p>
+      </div>
+    </a>
+    <a href="frizi14.html">
+      <div class="product">
+        <img src="images/frizi14.jpg" alt="lavatriqe">
+        <h3>FRIZ MIDEA MDRC207FEE01 142L</h3>
+        <p>€185.00</p>
+      </div>
+    </a>
+    <a href="frizi15.html">
+      <div class="product">
+        <img src="images/frizi15.png" alt="lavatriqe">
+        <h3>FRIZ MIDEA MDRC405FEE01 290L</h3>
+        <p>€289.99</p>
+      </div>
+    </a>
+    
+      </div>
+  </section>
+
+
+
+
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    const menuToggle = document.getElementById("menuToggle");
+
+    navLinks.classList.toggle("show");
+
+    // Toggle icon
+    menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
+  }
+</script>
+</body>
+</html>
