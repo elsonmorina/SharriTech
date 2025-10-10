@@ -7,13 +7,14 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      background-color: #6EC8CB;
       padding: 0;
+      margin: 0;
     }
     
     /* NAVBAR */
     nav {
-      background-color: #1a1a1a;
+      background-color: black;
       color: white;
       display: flex;
       justify-content: space-between;
@@ -48,7 +49,7 @@
     }
 
     .nav-links a:hover {
-      color: #4CAF50;
+      color: #6EC8CB;
     }
 
 
@@ -135,7 +136,7 @@
 
   .nav-links a:hover {
     background-color: #333;
-    color: #4CAF50;
+    color: #6EC8CB;
   }
 
   .nav-links.show {
@@ -161,11 +162,13 @@
   flex-wrap: wrap;
   margin: 40px auto;
   max-width: 1300px;
+  
 }
 
 .contact-container {
   flex: 1;
   min-width: 300px;
+  border: 2px solid black;
 }
 
 .map-container iframe {
@@ -187,7 +190,8 @@
 <body>
    <!-- NAVBAR -->
   <nav>
-  <a href="index.html" class="logo">SharriTech</a>
+  <a href="index.html"><img src="images/LOGOSHARRI.png" width="150px" height="50px" alt=""></a>
+  <!-- <a href="index.html" class="logo">Sharri<span>Tech</span></a> -->
 
   
   <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>

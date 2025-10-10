@@ -8,12 +8,12 @@
          body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      background-color: #6EC8CB;
     }
 
     /* NAVBAR */
     nav {
-      background-color: #1a1a1a;
+      background-color: black;
       color: white;
       display: flex;
       justify-content: space-between;
@@ -47,7 +47,7 @@
     }
 
     .nav-links a:hover {
-      color: #4CAF50;
+      color: #6EC8CB;
     }
      @media (max-width: 768px) {
   nav {
@@ -139,7 +139,7 @@
 
   .nav-links a:hover {
     background-color: #333;
-    color: #4CAF50;
+    color: #6EC8CB;
   }
 
   .nav-links.show {
@@ -167,6 +167,7 @@
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     padding: 20px;
     align-items: center;
+    border: 2px solid black;
   }
 
   .product-image img {
@@ -202,7 +203,7 @@
 
   .product-info ul li::before {
     content: "✓";
-    color: #4CAF50;
+    color: #6EC8CB;
     position: absolute;
     left: 0;
     font-weight: bold;
@@ -211,7 +212,7 @@
   .price {
     font-weight: 700;
     font-size: 1.3rem;
-    color: #4CAF50;
+    color: #6EC8CB;
   }
 
 
@@ -237,7 +238,8 @@
 <body>
      <!-- NAVBAR -->
  <nav>
-  <a href="index.html" class="logo">SharriTech</a>
+ <a href="index.html"><img src="images/LOGOSHARRI.png" width="150px" height="50px" alt=""></a>
+  <!-- <a href="index.html" class="logo">Sharri<span>Tech</span></a> -->
 
   
   <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
