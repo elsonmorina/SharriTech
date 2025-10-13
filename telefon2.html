@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SharriTech</title>
     <style>
-        body {
+         body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #6EC8CB;
@@ -49,58 +49,7 @@
     .nav-links a:hover {
       color: #6EC8CB;
     }
-     .products {
-      padding: 60px 40px;
-      text-align: center;
-    }
-    .products a{
-        text-decoration: none;
-        color: black;
-    }
-
-    .products h2 {
-      margin-bottom: 40px;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 40px;
-    }
-
-    .product {
-  background-color: #f9f9f9;
-  border: 2px solid black;
-  padding: 25px;
-  border-radius: 8px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-
-    .product img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 6px;
-    }
-
-    .product h3 {
-      margin: 10px 0;
-      font-size: 1.1rem;
-    }
-
-    .product p {
-      color: #6EC8CB;
-      font-weight: bold;
-    }
-
-    @media (max-width: 768px) {
+     @media (max-width: 768px) {
   nav {
     flex-direction: column;
     align-items: flex-start;
@@ -208,18 +157,87 @@
     }
   }
 }
-.nav-links .active{
+.product-detail {
+    display: flex;
+    gap: 40px;
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 20px;
+    align-items: center;
+    border: 2px solid black;
+  }
+
+  .product-image img {
+    width: 400px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  }
+
+  .product-info {
+    flex: 1;
+  }
+
+  .product-info h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: #222;
+  }
+
+  .product-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+  .product-info ul li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 18px;
+  }
+
+  .product-info ul li::before {
+    content: "✓";
     color: #6EC8CB;
-}
-del{
-  color: red;
-}
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+  }
+
+  .price {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #6EC8CB;
+  }
+
+
+  /* Responsive for small screens */
+  @media (max-width: 768px) {
+    .product-detail {
+      flex-direction: column;
+      max-width: 100%;
+      padding: 15px;
+    }
+
+    .product-image img {
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 20px;
+    }
+  }
+  .nav-links .active{
+    color: #6EC8CB;
+  }
     </style>
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- NAVBAR -->
-   <nav>
+      <nav>
   <a href="index.html"><img src="images/LOGOSHARRI.png" width="150px" height="50px" alt=""></a>
   <!-- <a href="index.html" class="logo">Sharri<span>Tech</span></a> -->
 
@@ -238,49 +256,29 @@ del{
     <a href="mikroval.html">Mikrovalë</a>
     <a href="bojler.html">Bojler</a>
     <a href="klima.html">Klima</a>
+    <a href="telefon.html">Telefon/Tablet</a>
     
   </div>
 </nav>
 
-<section class="products">
-    <div class="product-grid">
-    <a href="bojler1.html">
-      <div class="product">
-        <img src="images/bojler1.jpg" alt="bojler">
-        <h3>BOJLER ARISTON BLU1 R 80 H 2K 80L</h3>
-        <p>€169.00</p>
-      </div>
-    </a>
-    <a href="bojler2.html">
-      <div class="product">
-        <img src="images/bojler2.jpg" alt="bojler">
-        <h3>BOJLER ARISTON BLU1 R 80 V2K 80L</h3>
-        <p>€140.00</p>
-      </div>
-    </a>
-    <a href="bojler3.html">
-      <div class="product">
-        <img src="images/bojler3.png" alt="bojler">
-        <h3>BOJLER VIVAX HOME EWH-80VM 80L</h3>
-        <p>€115.00</p>
-      </div>
-    </a>
-    <a href="bojler4.html">
-      <div class="product">
-        <img src="images/bojler4.jpeg" alt="bojler">
-        <h3>BOJLER ARISTON ARISTON BLU1 100L</h3>
-        <p>€180.00</p>
-      </div>
-    </a>
-    <a href="bojler5.html">
-      <div class="product">
-        <img src="images/bojler5.jpg" alt="bojler">
-        <h3>BOJLER BLUE EVO ARISTON</h3>
-        <p>€90.00</p>
-      </div>
-    </a>
-     </div>
-  </section>
+    <div class="product-detail">
+  <div class="product-image">
+    <img src="images/telefon2.png" alt="TV Image">
+  </div>
+  <div class="product-info">
+    <h2>TELEFON SAMSUNG GALAXY A35 5G 128GB</h2>
+    <ul>
+  
+  
+  <li>Garancioni: 2Vite</li>
+  <li>Barkodi:8806095458397</li>
+  <li>Cmimi: <span class="price">€345.00</span></li>
+</ul>
+    <!-- <a href="#" class="buy-btn">Buy Now</a> -->
+  </div>
+</div>
+
+
 
 
 
