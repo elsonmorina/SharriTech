@@ -4,225 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SharriTech</title>
-    <style>
-        body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #6EC8CB;
-    }
-
-    /* NAVBAR */
-    nav {
-      background-color: black;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
-      
-    }
-    nav a{
-        text-decoration: none;
-    }
-
-    .logo {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: white;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .logo:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-    .nav-links {
-      display: flex;
-      gap: 25px;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-
-    .nav-links a:hover {
-      color: #6EC8CB;
-    }
-     .products {
-      padding: 60px 40px;
-      text-align: center;
-    }
-    .products a{
-        text-decoration: none;
-        color: black;
-    }
-
-    .products h2 {
-      margin-bottom: 40px;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 40px;
-    }
-
-    .product {
-  background-color: #f9f9f9;
-  padding: 25px;
-  border-radius: 8px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 2px solid black;
-}
-
-.product:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-
-    .product img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 6px;
-    }
-
-    .product h3 {
-      margin: 10px 0;
-      font-size: 1.1rem;
-    }
-
-    .product p {
-      color: #6EC8CB;
-      font-weight: bold;
-    }
-
-    @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-    width: 100%;
-  }
-
-  .hero {
-    padding: 60px 15px;
-    text-align: center;
-    align-items: center;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .hero a {
-    font-size: 0.9rem;
-    padding: 10px 20px;
-  }
-
-  .products {
-    padding: 40px 20px;
-  }
-
-  .product-grid {
-    grid-template-columns: 1fr; /* one product per row */
-  }
-
-  .product img {
-    height: auto;
-  }
-}
-/* Hamburger icon */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-}
-
-/* --- MOBILE STYLES --- */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-  }
-
-  .logo {
-    font-size: 1.6rem;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    background-color: #1a1a1a;
-    padding: 10px 0;
-    border-top: 1px solid #333;
-    animation: fadeIn 0.3s ease-in-out;
-  }
-
-  .nav-links a {
-    padding: 15px 20px;
-    font-size: 1.1rem;
-    color: white;
-    border-bottom: 1px solid #333;
-  }
-
-  .nav-links a:hover {
-    background-color: #333;
-    color: #6EC8CB;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-}
-.nav-links .active{
-    color: #6EC8CB;
-}
-del{
-  color: red;
-}
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <!-- NAVBAR -->
+
+  <!-- NAVBAR -->
   <nav>
-  <a href="index.html"><img src="images/LOGOSHARRI.png" width="150px" height="50px" alt=""></a>
+    <a href="index.html"><img src="images/LOGOSHARRI.png" width="150px" height="50px" alt=""></a>
   <!-- <a href="index.html" class="logo">Sharri<span>Tech</span></a> -->
 
-  
+   
   <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
 
   <!-- Nav links -->
@@ -237,7 +28,9 @@ del{
     <a href="mikroval.html">Mikrovalë</a>
     <a href="bojler.html">Bojler</a>
     <a href="klima.html">Klima</a>
-    <a href="telefon.html">Telefon/Tablet</a>
+    <a class="active" href="telefon.html">Telefon/Tablet</a>
+    <a href="trotinet.html">Trotinet Elektrik</a>
+    <a href="kositese.html">Kositese</a>
     
   </div>
 </nav>
@@ -265,6 +58,81 @@ del{
         <p>€330.00</p>
       </div>
     </a>
+    <a href="telefon4.html">
+      <div class="product">
+        <img src="images/telefon4.png" alt="">
+        <h3>TELEFON SAMSUNG GALAXY A34</h3>
+        <p>€330.00</p>
+      </div>
+    </a>
+    </div>
+  </section>
+  <div>
+    <h2>Tablet</h2>
+  </div>
+  <section class="products">
+    <div class="product-grid">
+    <a href="tablet1.html">
+      <div class="product">
+        <img src="images/tablet1.png" alt="">
+        <h3>TABLET GALAXY A7 LITE T200 3/32 GRAY</h3>
+        <p>€145.00</p>
+      </div>
+    </a>
+    <a href="tablet2.html">
+      <div class="product">
+        <img src="images/tablet2.jpg" alt="">
+        <h3>TABLET SAMSUNG GALAXY A9 </h3>
+        <p>€220.00</p>
+      </div>
+    </a>
+    <a href="tablet3.html">
+      <div class="product">
+        <img src="images/tablet3.jpg" alt="">
+        <h3>TABLET SAMSUNG A8 X200 4/46</h3>
+        <p>€229.00</p>
+      </div>
+    </a>
+
+    </div>
+  </section>
+  <div>
+    <h2>Smart Watch</h2>
+  </div>
+  <section class="products">
+    <div class="product-grid">
+    <a href="smartwatch1.html">
+      <div class="product">
+        <img src="images/smartwatch1.png" alt="">
+        <h3>VIVAX SMART WATCH LITE PRO2</h3>
+        <p>€38.49</p>
+      </div>
+    </a>
+    <a href="smartwatch2.html">
+      <div class="product">
+        <img src="images/smartwatch2.png" alt="">
+        <h3>VIVAX SMART WATCH LIFE FIT3</h3>
+        <p>€33.00</p>
+      </div>
+    </a>
+    
+
+    </div>
+  </section>
+  <div>
+    <h2>KUFJE</h2>
+  </div>
+  <section class="products">
+    <div class="product-grid">
+    <a href="kufje1.html">
+      <div class="product">
+        <img src="images/" alt="">
+        <h3>KUFJE TWS</h3>
+        <p>€35.00</p>
+      </div>
+   
+    
+
     </div>
   </section>
 

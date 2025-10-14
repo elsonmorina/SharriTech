@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SharriTech</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html"><img src="images/LOGOSHARRI.png" width="150px" height="50px" alt=""></a>
+  <!-- <a href="index.html" class="logo">Sharri<span>Tech</span></a> -->
+
+   
+  <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
+
+  <!-- Nav links -->
+  <div class="nav-links" id="navLinks">
+    <a href="TV.html">TV</a>
+    <a href="Frigorifer.html">Frigorifer</a>
+    <a href="frizat.html">Friz</a>
+    <a href="lavatriqe.html">Lavatriçe</a>
+    <a href="enelarese.html">Enëlarëse</a>
+    <a href="Shporetelektrik.html">Shporet elektrik</a>
+    <a href="thithese.html">Thithëse elektrike</a>
+    <a href="mikroval.html">Mikrovalë</a>
+    <a href="bojler.html">Bojler</a>
+    <a href="klima.html">Klima</a>
+    <a href="telefon.html">Telefon/Tablet</a>
+    <a class="active" href="trotinet.html">Trotinet Elektrik</a>
+    <a href="kositese.html">Kositese</a>
+    
+  </div>
+</nav>
+
+<section class="products">
+    <div class="product-grid">
+    <a href="trotinet1.html">
+      <div class="product">
+        <img src="images/trotinet1.jpeg" alt="">
+        <h3>TROTINET ELEKTRIK MS ENERGY ESCOOTER URBAN</h3>
+        <p>€565.00</p>
+      </div>
+    </a>
+    <a href="trotinet2.html">
+      <div class="product">
+        <img src="images/trotinet2.webp" alt="TV">
+        <h3>TROTINET ELEKTRIK BRUNO 25KM-33KM</h3>
+        <p>€386.99</p>
+      </div>
+      </a>
+      </div>
+  </section>
+
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    const menuToggle = document.getElementById("menuToggle");
+
+    navLinks.classList.toggle("show");
+
+    // Toggle icon
+    menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
+  }
+</script>
+</body>
+</html>

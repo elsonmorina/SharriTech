@@ -4,244 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SharriTech</title>
-    <style>
-         body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #6EC8CB;
-    }
-
-    /* NAVBAR */
-    nav {
-      background-color: black;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
-      
-    }
-    nav a{
-        text-decoration: none;
-    }
-
-    .logo {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: white;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .logo:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-    .nav-links {
-      display: flex;
-      gap: 25px;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-
-    .nav-links a:hover {
-      color: #6EC8CB;
-    }
-     @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-    width: 100%;
-  }
-
-  .hero {
-    padding: 60px 15px;
-    text-align: center;
-    align-items: center;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .hero a {
-    font-size: 0.9rem;
-    padding: 10px 20px;
-  }
-
-  .products {
-    padding: 40px 20px;
-  }
-
-  .product-grid {
-    grid-template-columns: 1fr; /* one product per row */
-  }
-
-  .product img {
-    height: auto;
-  }
-}
-/* Hamburger icon */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-}
-
-/* --- MOBILE STYLES --- */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-  }
-
-  .logo {
-    font-size: 1.6rem;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    background-color: #1a1a1a;
-    padding: 10px 0;
-    border-top: 1px solid #333;
-    animation: fadeIn 0.3s ease-in-out;
-  }
-
-  .nav-links a {
-    padding: 15px 20px;
-    font-size: 1.1rem;
-    color: white;
-    border-bottom: 1px solid #333;
-  }
-
-  .nav-links a:hover {
-    background-color: #333;
-    color: #6EC8CB;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-}
-.product-detail {
-    display: flex;
-    gap: 40px;
-    max-width: 900px;
-    margin: 40px auto;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    padding: 20px;
-    align-items: center;
-    border: 2px solid black;
-  }
-
-  .product-image img {
-    width: 400px;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  }
-
-  .product-info {
-    flex: 1;
-  }
-
-  .product-info h2 {
-    margin-top: 0;
-    font-size: 2rem;
-    color: #222;
-  }
-
-  .product-info ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-    font-size: 1.1rem;
-    color: #555;
-  }
-
-  .product-info ul li {
-    margin-bottom: 12px;
-    position: relative;
-    padding-left: 18px;
-  }
-
-  .product-info ul li::before {
-    content: "✓";
-    color: #6EC8CB;
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-  }
-
-  .price {
-    font-weight: 700;
-    font-size: 1.3rem;
-    color: #6EC8CB;
-  }
-
-
-  /* Responsive for small screens */
-  @media (max-width: 768px) {
-    .product-detail {
-      flex-direction: column;
-      max-width: 100%;
-      padding: 15px;
-    }
-
-    .product-image img {
-      width: 100%;
-      max-width: 400px;
-      margin-bottom: 20px;
-    }
-  }
-  .nav-links .active{
-    color: #6EC8CB;
-  }
-    </style>
+   <link rel="stylesheet" href="css/styleproduct.css">
 </head>
 <body>
-    <!-- NAVBAR -->
-      <nav>
- <a href="index.html"><img src="images/LOGOSHARRI.png" width="150px" height="50px" alt=""></a>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html"><img src="images/LOGOSHARRI.png" width="150px" height="50px" alt=""></a>
   <!-- <a href="index.html" class="logo">Sharri<span>Tech</span></a> -->
 
-  
+   
   <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
 
   <!-- Nav links -->
@@ -254,8 +26,11 @@
     <a href="Shporetelektrik.html">Shporet elektrik</a>
     <a href="thithese.html">Thithëse elektrike</a>
     <a href="mikroval.html">Mikrovalë</a>
-    <a href="bojler.html">Bojler</a>
+    <a class="active" href="bojler.html">Bojler</a>
     <a href="klima.html">Klima</a>
+    <a href="telefon.html">Telefon/Tablet</a>
+    <a href="trotinet.html">Trotinet Elektrik</a>
+    <a href="kositese.html">Kositese</a>
     
   </div>
 </nav>
