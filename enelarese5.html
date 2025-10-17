@@ -51,3 +51,22 @@
     <!-- <a href="#" class="buy-btn">Buy Now</a> -->
   </div>
 </div>
+<!-- FOOTER -->
+  <footer>
+    ©SharriTech.
+  </footer>
+
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    const menuToggle = document.getElementById("menuToggle");
+
+    navLinks.classList.toggle("show");
+
+    // Toggle icon
+    menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
+  }
+</script>
+</body>
+</html>

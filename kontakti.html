@@ -79,6 +79,14 @@
     .label {
       font-weight: bold;
     }
+    /* FOOTER */
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
      @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -190,10 +198,10 @@
 <body>
    <!-- NAVBAR -->
   <nav>
-  <a href="index.html"><img src="images/LOGOSHARRI.png" width="150px" height="50px" alt=""></a>
+    <a href="index.html"><img src="images/LOGOSHARRI.png" width="150px" height="50px" alt=""></a>
   <!-- <a href="index.html" class="logo">Sharri<span>Tech</span></a> -->
 
-  
+   
   <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
 
   <!-- Nav links -->
@@ -207,7 +215,10 @@
     <a href="thithese.html">Thithëse elektrike</a>
     <a href="mikroval.html">Mikrovalë</a>
     <a href="bojler.html">Bojler</a>
-    <a href="klima.html">Klima</a>
+    <a class="active" href="klima.html">Klima</a>
+    <a href="telefon.html">Telefon/Tablet</a>
+    <a href="trotinet.html">Trotinet Elektrik</a>
+    <a href="kositese.html">Kositese</a>
     
   </div>
 </nav>
@@ -249,6 +260,11 @@
       allowfullscreen="" loading="lazy"></iframe>
   </div>
 </div>
+
+  <!-- FOOTER -->
+  <footer>
+    ©SharriTech.
+  </footer>
 
   <script>
   function toggleMenu() {
